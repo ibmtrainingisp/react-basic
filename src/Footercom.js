@@ -1,9 +1,17 @@
 import React from 'react';
 
-function Footercom(){
-    return(
-        <h6>Footer</h6>
-    )
+class Footercom extends React.Component{
+    constructor(props){
+        super(props);
+        }
+        render(){
+          const mystyle = {
+            color: "red",
+            height:"50",
+            fontFamily: "TNR"
+          };
+          return <footer style={mystyle}>Here I am at {this.props.place}</footer>
+        }
 }
 
 export default Footercom;
