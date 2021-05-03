@@ -1,25 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class ExerciseState extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            color:'yellow'
-        };
+class ExerciseState extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { textval: '' };
     }
-    changecolor(){
-        this.state={color:'green'};
- 
+    changeHeader = (event) => {
+      this.setState({textval: event.target.value});
     }
-    render(){
-        return(
-            <div>
-            <h1>colour is {this.state.color}</h1>
-             <button onClick={this.changecolor}>Change</button>
-            </div>
-        )
+    displaytext(){
+    //alert(this.state.textval);
+    document.getElementById('inp').innerHTML=this.state.textval;
     }
-}
-
-export default ExerciseState;
+    render() {
+      return (
+        <div>
+        <header id='inp'></header>
+        <input type='text'onChange={this.changeHeader.bind(this)}></input>
+        <button onClick={this.displaytext.bind(this)}>Click!</button>
+        </div>
+      );
+    }
+  }
+  export default ExerciseState;
+  

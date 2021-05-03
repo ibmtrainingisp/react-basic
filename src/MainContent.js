@@ -5,7 +5,7 @@ function MainContent(){
     return(
      <div>   
     <h1>Main Content</h1>
-    <App></App>
+    {/* <App></App> */}
     </div>
     )
   }

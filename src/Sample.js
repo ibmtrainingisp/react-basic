@@ -1,16 +1,14 @@
 import React from 'react';
 
 class Sample extends React.Component{
-      render(){
+    printText(){
+        console.log("lll");
+    }  
+    render(){
         return(
         <div>
-        <ol>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-        </ol>
-        <button>Press</button>   
+        <input onChange></input>
+        <button onClick={this.printText}>Press</button>   
         </div>
         )
     }
